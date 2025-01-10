@@ -29,7 +29,7 @@ export default function ProductListing() {
       setProducts(data);
       const uniqueCategories = Array.from(
         new Set(data.map((product: Product) => product.category))
-      );
+      ) as string[];
       setCategories(["all", ...uniqueCategories]);
     }
   }, [data]);

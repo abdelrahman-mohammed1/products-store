@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Header() {
-  const cartItems = useSelector((store) => store?.account?.items);
+  const cartItems = useSelector(
+    (store: any = {}) => store?.account?.items || []
+  );
   return (
     <header className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
