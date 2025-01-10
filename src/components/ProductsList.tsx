@@ -97,19 +97,19 @@ export default function ProductListing() {
             </Link>
             <p className="text-gray-600 mb-4">${product.price.toFixed(2)}</p>
             {quantities[product.id] ? (
-              <div className="flex items-center mt-auto">
+              <div className="flex items-center justify-between min-w-full mt-auto">
                 <button
                   onClick={() => handleDecreaseQuantity(product.id)}
-                  className="bg-gray-300 text-gray-700 px-2 py-1 rounded-l hover:bg-gray-400"
+                  className="bg-blue-500 text-white w-[20%]   px-2  py-1 rounded-l hover:bg-gray-400"
                 >
                   -
                 </button>
-                <span className="px-4 py-2 border-t border-b">
+                <span className="px-2 py-1 border-t border-b w-[60%] text-center">
                   {quantities[product.id]}
                 </span>
                 <button
                   onClick={() => handleIncreaseQuantity(product.id)}
-                  className="bg-gray-300 text-gray-700 px-2 py-1 rounded-r hover:bg-gray-400"
+                  className="bg-blue-500 text-white w-[20%]  px-2 py-1 rounded-r hover:bg-gray-400"
                 >
                   +
                 </button>

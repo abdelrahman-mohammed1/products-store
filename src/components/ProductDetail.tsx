@@ -72,7 +72,7 @@ export default function ProductDetail() {
               >
                 -
               </button>
-              <span className="mx-4 w-[60%] ">{quantity}</span>
+              <span className="mx-4 w-[60%] text-center ">{quantity}</span>
               <button
                 onClick={() => setQuantity(quantity + 1)}
                 className="bg-blue-500 w-[20%] text-white px-4 py-2 rounded hover:bg-blue-600"

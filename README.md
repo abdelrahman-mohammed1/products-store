@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# E-Commerce Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a simple e-commerce application built with React.js and Redux Toolkit. It uses the Fake Store API to fetch product data and allows users to browse products, add them to a cart, and manage their shopping experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Product listing with category filtering
+- Product detail view
+- Shopping cart functionality
+- Responsive design
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Usage
 
-- Configure the top-level `parserOptions` property like this:
+- Browse products on the home page
+- Use the category filter to narrow down product selection
+- Click on a product to view its details
+- Add products to the cart using the "Add to Cart" button
+- Adjust quantities using the plus and minus buttons
+- View and manage your cart by clicking the cart icon in the header
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies Used
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- React.js
+- Redux Toolkit for state management
+- React Router for navigation
+- React Query for data fetching
+- Tailwind CSS for styling
+- Vite as the build tool
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## API
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project uses the [Fake Store API](https://fakestoreapi.com/) to fetch product data.
+
+## Environment Variables
+
+The project uses the following environment variable:
+
+- `VITE_PRODUCTS_ENDPOINT`: The URL for the Fake Store API (e.g., https://fakestoreapi.com/products)
+
+Ensure this variable is set in your environment or in a `.env` file in the project root.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
